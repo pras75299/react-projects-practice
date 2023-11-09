@@ -1,0 +1,12 @@
+input{
+  border: #ccc solid 1px;
+  padding: 8px !important;
+  border-radius: 4px !important;
+}
+
+button{
+  border: #ccc solid 1px;
+  border-radius: 4px;
+  padding: 4px 8px !important;
+  margin-top: 8px !important;
+}
