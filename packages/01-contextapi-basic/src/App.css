@@ -1,12 +1,15 @@
-input{
-  border: #ccc solid 1px;
-  padding: 8px !important;
-  border-radius: 4px !important;
-}
 
 button{
-  border: #ccc solid 1px;
-  border-radius: 4px;
-  padding: 4px 8px !important;
-  margin-top: 8px !important;
+  color: #fff !important;
+  background-color: #9333ea !important;
+}
+button:hover{
+  color: #fff !important;
+    background-color: #7e22ce !important;
+}
+.positionoftext{
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 34px;
 }
