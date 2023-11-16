@@ -3,19 +3,25 @@ import UserContext from "../context/UserContext";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
   const { setUser } = useContext(UserContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!username) {
       alert("Please provide username");
     } else if (!password) {
       alert("Please provide password");
+    } else if (!isChecked) {
+      alert("Please check the checkbox");
     } else {
       setUser({ username, password });
       setUsername("");
       setPassword("");
+      setIsChecked(false);
     }
   };
+
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -77,11 +83,13 @@ const Login = () => {
                       type="checkbox"
                       className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
                       required=""
+                      checked={isChecked}
+                      onChange={(e) => setIsChecked(!isChecked)}
                     />
                   </div>
                   <div className="ml-3 text-sm">
                     <label
-                      for="remember"
+                      htmlFor="remember"
                       className="text-gray-500 dark:text-gray-300"
                     >
                       Remember me
