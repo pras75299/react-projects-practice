@@ -30,10 +30,10 @@ To get started with this monorepo, you'll need to have Node.js and npm/yarn inst
    npm install
    ```
 
-3. Run a specific project (replace `project-name` with the actual project directory):
+3. Run a specific project
    ```
    cd packages/project-name
-   npm start
+   npm run dev
    ```
 
 ## Contributing
