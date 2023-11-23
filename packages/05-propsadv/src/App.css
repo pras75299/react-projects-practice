@@ -1,0 +1,58 @@
+#root{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.card-main {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+}
+@media (max-width: 599px) {
+  .card-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+@media (min-width: 600px) {
+  .card-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+@media (min-width: 900px) {
+  .card-main{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+
+.card-main img {
+  height: 256px;
+  object-fit: cover;
+}
+.deleteIcon{
+  position: absolute;
+  right: 0;
+  background-color: darkorange;
+  color:white;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.editIcon {
+  position: absolute;
+  right: 0;
+  top:37px;
+  background-color: #2196c4;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+@media(max-width: 820px){
+  #root{
+    max-width: 100%;
+  }
+}
