@@ -9,6 +9,24 @@
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 20px;
 }
+@media (max-width: 599px) {
+  .card-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+@media (min-width: 600px) {
+  .card-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+@media (min-width: 900px) {
+  .card-main{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
 
 .card-main img {
   height: 256px;
