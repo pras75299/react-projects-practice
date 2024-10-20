@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const TodoContext = React.createContext({
-  createtodo: () => {},
-  deleteTodo: () => {},
-  updateTodo: () => {},
-  getTodos: () => {},
-});
+export const TodoContext = React.createContext(null);
 
-export const TodoProvider = TodoContext.Provider;
-
-export default function useTheme() {
-  return useContext(ThemeContext);
-}
+export const TodoProvider = (props) => {
+  const [todo, setTodo] = useState([]);
+  return (
+    <TodoContext.Provider value={{ todo, setTodo }}>
+      {props.children}
+    </TodoContext.Provider>
+  );
+};
