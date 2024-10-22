@@ -2,17 +2,19 @@ import { useContext, useState } from "react";
 import { TodoContext } from "../context/todoContext";
 
 function TodoForm() {
-  const todocontext = useContext(TodoContext);
+  const { addTodo } = useContext(TodoContext); // Get addTodo from context
   const [inputValue, setInputValue] = useState("");
-  const handleTodo = (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      todocontext.setTodo([...todocontext.todo, { name: inputValue }]);
-      setInputValue("");
+      addTodo(inputValue); // Add new todo
+      setInputValue(""); // Clear input field
     }
   };
+
   return (
-    <form className="flex">
+    <form className="flex" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Write Todo..."
@@ -23,7 +25,6 @@ function TodoForm() {
       <button
         type="submit"
         className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0"
-        onClick={handleTodo}
       >
         Add
       </button>

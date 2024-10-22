@@ -10,7 +10,7 @@ Inside the `packages` folder, you'll find individual projects, each with its uni
 
 - **01-contextapi-basic**: using Basic context API and build simple login form.
 - **02-contextapi-adv**: A theme changer build using context api.
-- **03-todocontext-adv**: Todo app using context API[WIP].
+- **03-todocontext-adv**: Todo app using context API.
 - **04-propsinreact**: User data showing using props concept.
 
 ## Getting Started
